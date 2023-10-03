@@ -7,8 +7,7 @@
 ```
 [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
-[“Russia”, “Denmark”, “Kazan”] → [] 
--->
+[“Russia”, “Denmark”, “Kazan”] → []
 ```
 
 ## Содержание репозитория
@@ -16,7 +15,7 @@
 |Файл |Описание|Комментарий|
 |-|--------|------|
 |blockscheme.png|Блок схема основного алгоритма|В формате PNG.|
-|blockscheme.drawio|Интерактивная блок схема основного алглоритма|Открыть можно [плагином для VS Code](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) или [Веб сервиса Draw IO](https://app.diagrams.net/)|
+|blockscheme.drawio|Интерактивная блок схема основного алглоритма|Открыть можно [плагином для VS Code](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) или [веб сервисом Draw IO](https://app.diagrams.net/)|
 |Note.md |Исходное техническое задание||
 |README.md |Документация по репозиторию||
 |SortingByStringLength/Program.cs |Исходный код на C#||
