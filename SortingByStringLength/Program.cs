@@ -39,18 +39,18 @@ string[] CreateManualArrayStr()
 
 string[] SortByStringLenght(string[] array, int maxLength)
 {
-    int strs = 0;
+    int stringCounts = 0;
     for (int i = 0; i < array.Length; i++)
     {
         string currentString = array[i];
         int currentStringLength = currentString.Length;
         if (currentStringLength <= maxLength)
         {
-            strs++;
+            stringCounts++;
         }
     }
 
-    string[] sortArray = new string[strs];
+    string[] sortArray = new string[stringCounts];
 
     int j = 0;
 
