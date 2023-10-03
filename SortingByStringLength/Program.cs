@@ -6,10 +6,36 @@
 ["1234", "1567", "-2", "computer science"] → ["-2"]
 ["Russia", "Denmark", "Kazan"] → []
 */
-
-string[] inputeArray = {"1234", "1567", "-2", "computer science"};
+Console.Clear();
+string[] inputeArray = CreateManualArrayStr();
+Console.WriteLine("Исходный массив до алгоритма");
+PrintArrayStr(inputeArray);
 string[] sortedArray = SortByStringLenght(inputeArray, 3);
-Console.WriteLine(string.Join(", ", sortedArray));
+Console.WriteLine("Исходный массив");
+PrintArrayStr(inputeArray);
+Console.WriteLine("Копированный массив массив");
+PrintArrayStr(sortedArray);
+
+void PrintArrayStr(string[] array)
+{
+    Console.Write("[");
+    Console.Write(string.Join(", ", array));
+    Console.WriteLine("]");
+}
+
+string[] CreateManualArrayStr()
+{
+    Console.Write("Введите кол-во строк для первоначального массива: ");
+    int count = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine($"Заполните массив {count} раз");
+    string[] array = new string[count];
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write($"{i + 1} из {count}: ");
+        array[i] = Console.ReadLine()!;
+    }
+    return array;
+}
 
 string[] SortByStringLenght(string[] array, int maxLength)
 {
@@ -18,7 +44,7 @@ string[] SortByStringLenght(string[] array, int maxLength)
     {
         string currentString = array[i];
         int currentStringLength = currentString.Length;
-        if (currentStringLength < maxLength)
+        if (currentStringLength <= maxLength)
         {
             strs++;
         }
@@ -33,7 +59,7 @@ string[] SortByStringLenght(string[] array, int maxLength)
         string currentString = array[index];
         int currentStringLength = currentString.Length;
 
-        if (currentStringLength < maxLength)
+        if (currentStringLength <= maxLength)
         {
             sortArray[j] = currentString;
             j++;
